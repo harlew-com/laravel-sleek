@@ -1,0 +1,62 @@
+{
+    "name": "harlew-com/laravel-sleek",
+    "description": "React-style component syntax for Laravel Blade",
+    "keywords": [
+        "laravel",
+        "blade",
+        "components",
+        "react",
+        "view",
+        "compiler"
+    ],
+    "homepage": "https://github.com/yourvendor/laravel-prism",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Harrison",
+            "email": "harrison@harlew.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "spatie/laravel-package-tools": "^1.16",
+        "illuminate/contracts": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.14",
+        "nunomaduro/collision": "^7.10|^8.0",
+        "orchestra/testbench": "^8.0|^9.0",
+        "pestphp/pest": "^2.34",
+        "pestphp/pest-plugin-laravel": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "HarlewCom\\LaravelSleek\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HarlewCom\\LaravelSleek\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HarlewCom\\LaravelSleek\\SleekServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
