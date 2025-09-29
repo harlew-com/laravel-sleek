@@ -72,6 +72,25 @@ Use dot notation for namespaced components:
 <Card.Title />          → <x-card.title />
 ```
 
+**Alternative: Subfolder Components Without Dot Notation**
+
+If you prefer subfolders without dot notation (e.g., `<FormInput />` instead of `<Form.Input />`), register component aliases in your `AppServiceProvider`:
+
+```php
+use Illuminate\Support\Facades\Blade;
+
+public function boot()
+{
+    Blade::component('components.forms.input', 'FormInput');
+}
+```
+
+Then use:
+
+```blade
+<FormInput />           → Uses components/forms/input.blade.php
+```
+
 ### With Attributes
 
 All attributes are preserved:
